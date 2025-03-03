@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { register, login, selectCurrentUser, selectUserStatus, selectUserError } from '../../redux/slices/userSlice';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import styles from '../style/headerStyle.module.css';
 
 const UserAuth = () => {
     const dispatch = useDispatch();
@@ -58,9 +59,9 @@ const UserAuth = () => {
     };
 
     return (
-        <div className="container mt-5">
-            <div className="card mx-auto" style={{ maxWidth: '500px' }}>
-                <div className="card-body">
+        <div className={styles.cardbody1}>
+            <div className={styles.cardbody2} style={{ maxWidth: '500px' }}>
+                <div className={styles.cardbody}>
                     <h3 className="card-title text-center mb-4">
                         {isRegister ? 'Регистрация Клиента' : 'Авторизация Клиента'}
                     </h3>

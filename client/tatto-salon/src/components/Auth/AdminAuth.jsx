@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { registerAdmin, loginAdmin, selectCurrentAdmin, selectAdminStatus, selectAdminError } from '../../redux/slices/adminSlice';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import styles from '../style/headerStyle.module.css';
 
 const AdminAuth = () => {
     const dispatch = useDispatch();
@@ -59,9 +60,9 @@ const AdminAuth = () => {
     };
 
     return (
-        <div className="container mt-5">
-            <div className="card mx-auto" style={{ maxWidth: '500px' }}>
-                <div className="card-body">
+        <div className={styles.cardbody1}>
+            <div className={styles.cardbody2} style={{ maxWidth: '500px' }}>
+                <div className={styles.cardbody}>
                     <h3 className="card-title text-center mb-4">
                         {isRegister ? 'Регистрация Администратора' : 'Авторизация Администратора'}
                     </h3>
@@ -126,7 +127,7 @@ const AdminAuth = () => {
                                 />
                             </div>
                         )}
-                        <button type="submit" className="btn btn-primary w-100" disabled={status === 'loading'}>
+                        <button type="submit" className={styles.button} disabled={status === 'loading'}>
                             {status === 'loading'
                                 ? 'Загрузка...'
                                 : isRegister
@@ -135,7 +136,7 @@ const AdminAuth = () => {
                         </button>
                     </form>
                     <div className="mt-3 text-center">
-                        <button className="btn btn-link" onClick={() => {
+                        <button className={styles.text} onClick={() => {
                             setIsRegister(prev => !prev);
                             // Сбрасываем сообщение об успехе при переключении
                             setSuccessMessage('');
