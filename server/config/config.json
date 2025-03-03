@@ -1,0 +1,23 @@
+{
+    "development": {
+        "username": "postgres",
+        "password": "Hesus2016",
+        "database": "tattoo-salon",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "postgres",
+        "password": "Hesus2016",
+        "database": "tattoo-salon_test",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "production": {
+        "username": "postgres",
+        "password": "Hesus2016",
+        "database": "tattoo-salon_prod",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    }
+}
