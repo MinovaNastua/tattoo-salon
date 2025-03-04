@@ -25,7 +25,7 @@ const Header = () => {
     };
 
     return (
-        <Navbar  expand="lg" style={{backgroundColor:' #232227 !important'}} >
+        <Navbar  expand="lg" style={{backgroundColor:' #232227 !important', borderBottom: '2px solid #F2889C', margin: '10px',FONTSIZE: '20PX'}} >
             <Container style={{backgroundColor:' #232227'}} bg="light" expand="lg" >
                 {/* <Navbar.Brand style={{backgroundColor:' #232227'}} bg="light" expand="lg"  as={Link} to="https://i1.sndcdn.com/artworks-000493820265-j9bd8w-t500x500.jpg">
                     Sad boy vibe
@@ -33,8 +33,8 @@ const Header = () => {
 
         <Nav.Link className={styles.link}  as={Link} to="/master-dashboard">Главная</Nav.Link>
 
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar"/>
+                <Navbar.Collapse id="basic-navbar-nav" >
                     <Nav className="me-auto" >
                         {role === 'admin' && (
                             <>

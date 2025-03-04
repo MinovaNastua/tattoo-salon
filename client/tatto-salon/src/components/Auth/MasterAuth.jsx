@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import styles from '../style/headerStyle.module.css';
 import {
     registerMaster,
     loginMaster,
@@ -77,9 +78,9 @@ const MasterAuth = () => {
     };
 
     return (
-        <div className="container mt-5">
-            <div className="card mx-auto" style={{ maxWidth: '600px' }}>
-                <div className="card-body">
+        <div className={styles.cardbody1}>
+            <div className={styles.cardbody2} style={{ maxWidth: '600px' }}>
+                <div className={styles.cardbody}>
                     <h3 className="card-title text-center mb-4">
                         {isRegister ? 'Регистрация Мастера' : 'Авторизация Мастера'}
                     </h3>
@@ -190,7 +191,7 @@ const MasterAuth = () => {
                                 </div>
                             </>
                         )}
-                        <button type="submit" className="btn btn-primary w-100" disabled={status === 'loading'}>
+                        <button type="submit" className={styles.button} disabled={status === 'loading'}>
                             {status === 'loading'
                                 ? 'Загрузка...'
                                 : isRegister
@@ -200,7 +201,7 @@ const MasterAuth = () => {
                     </form>
                     <div className="mt-3 text-center">
                         <button
-                            className="btn btn-link"
+                            className={styles.text}
                             onClick={() => {
                                 setIsRegister(prev => !prev);
                                 setSuccessMessage('');

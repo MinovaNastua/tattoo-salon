@@ -141,7 +141,7 @@ const UserAuth = () => {
                                 required
                             />
                         </div>
-                        <button type="submit" className="btn btn-primary w-100" disabled={status === 'loading'}>
+                        <button type="submit" className={styles.button} disabled={status === 'loading'}>
                             {status === 'loading'
                                 ? 'Загрузка...'
                                 : isRegister
@@ -150,7 +150,7 @@ const UserAuth = () => {
                         </button>
                     </form>
                     <div className="mt-3 text-center">
-                        <button className="btn btn-link" onClick={() => {
+                        <button className={styles.text} onClick={() => {
                             setIsRegister(prev => !prev);
                             setSuccessMessage('');
                         }}>

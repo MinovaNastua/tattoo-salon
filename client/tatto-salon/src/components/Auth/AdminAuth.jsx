@@ -116,7 +116,7 @@ const AdminAuth = () => {
                         {isRegister && (
                             <div className="mb-3">
                                 <label htmlFor="photo" className="form-label">
-                                    Фото (опционально)
+                                    Фото
                                 </label>
                                 <input
                                     type="file"
